@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE STOW — Curated Convenience for Premium Spaces</title>
+  <meta name="description" content="THE STOW is a chic, premium vending experience for luxury residential and wellness environments. Curated convenience for premium spaces. Smart. Stylish. Stocked." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* Flat, clean palette */
+      --black:#0B0B0B;      /* matte hero */
+      --off:#F5F4F2;        /* clean ivory */
+      --beige:#E5DDD3;      /* warm beige */
+      --stone:#D7CEC3;      /* stone/greige */
+      --gold:#D6AF66;       /* champagne accent (sparingly) */
+      --text:#0E0E0E;       /* text on light */
+      --text-inv:#F2F2F2;   /* text on dark */
+      --hair:1px solid rgba(0,0,0,.08);
+      --shadow:0 14px 34px rgba(0,0,0,.10);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--off);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin-inline:auto;padding:clamp(16px,3vw,28px)}
+    .grid{display:grid;gap:clamp(16px,2vw,24px)}
+    .card{background:#fff;border:var(--hair);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,30px)}
+    .card.dark{background:var(--black);color:var(--text-inv)}
+    .card.beige{background:var(--beige)}
+    .card.ivory{background:var(--off)}
+    .card.stone{background:var(--stone)}
+    .pill{display:inline-flex;gap:.55rem;align-items:center;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.45rem .8rem;font-size:.8rem}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.15rem;border-radius:999px;border:1px solid #2e2e2e;background:transparent;color:var(--text-inv);font-weight:600;letter-spacing:.02em;transition:.25s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,0,0,.35)}
+    .btn.light{color:var(--text);border-color:#b9b9b9}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+    .rule{height:1px;background:rgba(0,0,0,.08);border:0;margin:16px 0}
+    .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;opacity:.65}
+    h1,h2{margin:0;font-family:"Libre Caslon Text",ui-serif,Georgia,serif}
+    h1{font-size:clamp(40px,6vw,76px);line-height:1.04}
+    h2{font-size:clamp(22px,3vw,40px);line-height:1.16}
+    p{margin:10px 0 0;line-height:1.65;font-size:clamp(14px,1.2vw,17px)}
+
+    /* Layouts */
+    .hero{background:var(--black);color:var(--text-inv);padding:clamp(28px,5vw,56px) 0}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:end}
+    @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+    .specs{grid-template-columns:repeat(4,minmax(220px,1fr))}
+    @media (max-width:1100px){.specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:600px){.specs{grid-template-columns:1fr}}
+    .gallery{grid-template-columns:repeat(12,1fr)}
+    .shot{grid-column:span 6;min-height:220px;border-radius:18px;border:var(--hair);background:#121212;display:flex;align-items:center;justify-content:center;color:#d9d9d9}
+    .shot small{opacity:.9}
+
+    /* Inline SVG wordmark sizing */
+    .logo{display:block}
+    .logo svg{width:min(520px,80%);height:auto}
+
+    /* Simple form */
+    form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+    form .field{display:flex;flex-direction:column;gap:6px}
+    input,textarea{background:#0f0f0f;border:1px solid #2b2b2b;border-radius:12px;padding:12px 14px;color:#eaeaea;font-size:16px}
+    textarea{min-height:120px}
+    button[type=submit]{background:transparent;border:1px solid #2e2e2e;color:#f2f2f2;border-radius:999px;padding:.9rem 1.15rem;font-weight:600;letter-spacing:.02em}
+    button[type=submit]:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,0,0,.35)}
+    footer{color:#9a9a9a;font-size:.9rem;padding:28px 0}
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <span class="pill">Invitation‑Only Placement • Luxury Residential & Wellness</span>
+        <div class="logo" aria-label="THE STOW logo (wordmark)">
+          <!-- Inline SVG: white wordmark, no monogram, minimal tracking -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" role="img" aria-labelledby="title"><title id="title">THE STOW</title>
+            <rect width="1600" height="360" fill="transparent"/>
+            <g transform="translate(40,260)">
+              <text x="0" y="0" fill="#F2F2F2" font-family="Inter, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="220" letter-spacing="18">THE STOW</text>
+            </g>
+          </svg>
+        </div>
+        <p style="margin-top:8px">Curated convenience for premium spaces. <strong style="color:var(--gold)">Smart. Stylish. Stocked.</strong></p>
+        <div class="cta" style="margin-top:16px">
+          <a class="btn" href="#apply">Request Placement</a>
+          <a class="btn light" href="#specs">View Specs</a>
+        </div>
+        <p style="margin-top:16px;opacity:.9">A chic, premium vending experience tailored for upscale environments — beginning with beverages and luxury snacks. Designed for property managers, hospitality & facilities directors, and wellness‑focused operators who demand an amenity that feels bespoke.</p>
+      </div>
+      <div class="card dark">
+        <div class="eyebrow">Primary Usage</div>
+        <p>Black/White palette with sparing champagne accents. Luxe minimalist wordmark — no monogram. Clean optical spacing for machines, app, and spatial branding.</p>
+        <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div class="shot"><small>Luxury lobby mockup</small></div>
+          <div class="shot"><small>Wellness / spa mockup</small></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- WHY IT WORKS / EXCLUSIVITY -->
+    <section class="wrap">
+      <div class="grid" style="grid-template-columns:1fr 1fr;align-items:start">
+        <div class="card beige">
+          <div class="eyebrow">Why Properties Choose THE STOW</div>
+          <h2>Luxury meets smart retail — a better amenity for modern living.</h2>
+          <ul style="margin:12px 0 0; padding-left:18px; line-height:1.7">
+            <li><strong>Elevated, quiet‑luxury presence</strong> — matte finishes, clean decals, disciplined spacing.</li>
+            <li><strong>Curated assortments</strong> — boutique beverages & luxury snacks tailored to resident profiles.</li>
+            <li><strong>Seamless & smart</strong> — cashless, telemetry‑enabled, remote monitoring, proactive restock.</li>
+            <li><strong>Operationally clean</strong> — SLAs, KPI reporting, and transparent pricing.</li>
+            <li><strong>Zero heavy lift</strong> — we handle menu design, install, compliance, and servicing.</li>
+          </ul>
+          <div class="cta" style="margin-top:16px">
+            <a class="btn light" href="#gallery">View Environments</a>
+          </div>
+        </div>
+        <div class="card ivory" id="specs">
+          <div class="eyebrow">Smart & Clean</div>
+          <h2>Minimal hardware. Maximum experience.</h2>
+          <div class="grid specs" style="margin-top:12px">
+            <div class="card ivory" style="border:var(--hair)"><strong>Cashless + Wallets</strong><p>Frictionless payments; Apple/Google Pay ready.</p></div>
+            <div class="card ivory" style="border:var(--hair)"><strong>Live Telemetry</strong><p>Stock, sales, and alerts in real time.</p></div>
+            <div class="card ivory" style="border:var(--hair)"><strong>Curated Planograms</strong><p>Seasonal rotations; no mass‑market clutter.</p></div>
+            <div class="card ivory" style="border:var(--hair)"><strong>Quiet‑Luxury Finish</strong><p>Matte black base; optional champagne accent for premium tiers.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / TARGET ENVIRONMENTS -->
+    <section class="wrap" id="gallery">
+      <div class="card stone">
+        <div class="eyebrow">Target Environments</div>
+        <p><strong>Primary:</strong> Luxury residential (lobbies & amenity lounges), upscale fitness & spa. <strong>Secondary:</strong> Select office/coworking and department stores — when the environment aligns with our standards.</p>
+        <div class="grid gallery" style="margin-top:12px">
+          <div class="shot" style="grid-column:span 7"><small>Residential lobby vignette</small></div>
+          <div class="shot" style="grid-column:span 5"><small>Spa hallway detail</small></div>
+          <div class="shot" style="grid-column:span 6"><small>Amenity lounge corner</small></div>
+          <div class="shot" style="grid-column:span 6"><small>Department store nook</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY / INVITATION ONLY -->
+    <section class="wrap" id="apply">
+      <div class="card dark">
+        <div class="eyebrow">Invitation‑Only Program</div>
+        <h2>Request placement</h2>
+        <p>We review each location for design integrity, audience fit, and operational readiness. If approved, we co‑create a curated menu and launch plan tailored to your space.</p>
+        <form action="mailto:hello@thestow.example" method="post" enctype="text/plain">
+          <div class="field"><label class="eyebrow" for="name">Your name</label><input id="name" name="Name" placeholder="Jane Doe" required></div>
+          <div class="field"><label class="eyebrow" for="email">Email</label><input id="email" name="Email" type="email" placeholder="jane@propertyco.com" required></div>
+          <div class="field" style="grid-column:1/-1"><label class="eyebrow" for="property">Property & city</label><input id="property" name="Property" placeholder="Hudson House, Greenwich CT" required></div>
+          <div class="field" style="grid-column:1/-1"><label class="eyebrow" for="notes">Notes</label><textarea id="notes" name="Notes" placeholder="Resident profile, hours, staff coverage, estimated footfall…"></textarea></div>
+          <div style="grid-column:1/-1;margin-top:6px"><button type="submit">Submit Request</button></div>
+        </form>
+        <p style="margin-top:10px;opacity:.8">We approve a limited number of sites each month to preserve quality of experience.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <hr class="rule">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <p>© <span id="year"></span> THE STOW. All rights reserved.</p>
+      <p class="eyebrow">Minimal • Modern • Curated</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
